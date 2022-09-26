@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colors</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height:700px;
+        }
+
+        button{
+            padding:10px 20px;
+            border-radius: 5px;
+            border-color: blanchedalmond;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgba(188, 159, 159, 0.63);
+        }
+    </style>
+</head>
+<body>
+    <button>CLick Me </button>
+</body>
+</html>
+<script>
+
+
+    document.querySelector("button").addEventListener("click",func)
+
+
+    function func(){
+        console.log("hi")
+        let body=document.querySelector("body");
+        let x=Math.floor(Math.random()*255);
+        let y=Math.floor(Math.random()*255);
+        let z=Math.floor(Math.random()*255);
+        body.style.backgroundColor="rgb("+x+","+y+","+z+")";
+    }
+</script>
